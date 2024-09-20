@@ -11,4 +11,5 @@ package dataAcces;
  */
 public class UserManageFactory {
     
+    
 }
