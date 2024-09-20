@@ -10,5 +10,9 @@ package dataAcces;
  * @author 2dam
  */
 public interface DataAccessible {
-   public void getUsuario();
+
+    /**
+     *
+     */
+    public void getUsuario();
 }
