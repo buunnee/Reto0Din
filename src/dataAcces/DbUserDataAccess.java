@@ -9,6 +9,11 @@ package dataAcces;
  *
  * @author 2dam
  */
-public class DbUserDataAccess {
+public class DbUserDataAccess implements DataAccessible{
+
+    @Override
+    public void getUsuario() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }
