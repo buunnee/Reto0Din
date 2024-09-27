@@ -3,6 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package userInterface;
 
 import javafx.application.Application;
@@ -13,14 +14,21 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- *
- * @author 2dam
+ * Clase principal de la aplicación JavaFX que gestiona la interfaz de usuario.
+ * Extiende la clase Application para iniciar la aplicación JavaFX.
+ * 
+ * @author Lucian
  */
-
 public class UserApplication extends Application {
 
     private static final Logger logger = Logger.getLogger(UserApplication.class.getName());
 
+    /**
+     * Método que se llama al iniciar la aplicación.
+     * Carga la interfaz de usuario desde un archivo FXML y muestra la ventana principal.
+     *
+     * @param primaryStage la ventana principal de la aplicación.
+     */
     @Override
     public void start(Stage primaryStage) {
         try {
@@ -34,6 +42,11 @@ public class UserApplication extends Application {
         }
     }
 
+    /**
+     * Método principal que inicia la aplicación JavaFX.
+     *
+     * @param args argumentos de línea de comandos.
+     */
     public static void main(String[] args) {
         launch(args);
     }

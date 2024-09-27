@@ -8,10 +8,22 @@ import java.sql.ResultSet;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/**
+ * Clase que proporciona acceso a los datos del usuario desde una base de datos.
+ * Implementa la interfaz DataAccessible para definir cómo se obtienen los datos del usuario.
+ * 
+ * @author Lucian
+ */
 public class DbUserDataAccess implements DataAccessible {
 
     private static final Logger logger = Logger.getLogger(DbUserDataAccess.class.getName());
 
+    /**
+     * Obtiene el objeto User desde la base de datos.
+     *
+     * @return el objeto User con los datos cargados desde la base de datos.
+     * @throws Exception si ocurre un error al acceder a la base de datos.
+     */
     @Override
     public User getUser() throws Exception {
         String url = "jdbc:mysql://localhost:3306/reto0_din?serverTimezone=Europe/Madrid&useSSL=false";

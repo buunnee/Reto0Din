@@ -4,8 +4,18 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
+/**
+ * Fábrica para gestionar el acceso a los datos del usuario.
+ * Proporciona un método para obtener una instancia de DataAccessible según la configuración.
+ */
 public class UserManageFactory {
 
+    /**
+     * Obtiene una instancia de DataAccessible según la configuración especificada en el archivo config.properties.
+     *
+     * @return una instancia de DataAccessible, que puede ser FileUserDataAccess o DbUserDataAccess.
+     * @throws IOException si ocurre un error al cargar el archivo de configuración.
+     */
     public static DataAccessible getDataAccess() throws IOException {
         Properties config = new Properties();
 
@@ -28,6 +38,6 @@ public class UserManageFactory {
             return new DbUserDataAccess();     // Asegúrate de tener esta implementación para la base de datos
         }
 
-        return null;
+        return null; // Retorna null si el tipo de acceso a datos no es válido
     }
 }

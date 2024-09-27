@@ -5,20 +5,33 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.GridPane?>
 
+<!-- 
+    Este archivo FXML define la interfaz gráfica de la ventana de datos del usuario.
+    Utiliza un GridPane para organizar los elementos de la interfaz.
+    Controlador: userInterface.UserDataWindowController
+-->
 <GridPane fx:controller="userInterface.UserDataWindowController"
-          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
-    
+          xmlns:fx="http://javafx.com/fxml" 
+          alignment="center" hgap="10" vgap="10" 
+          minWidth="400" minHeight="300"    
+          style="-fx-padding: 20; -fx-background-color: white;">  
+
+    <!-- Etiqueta para mostrar el DNI -->
     <Label text="DNI:"/>
     <Label fx:id="dniLabel" GridPane.columnIndex="1"/>
-    
+
+    <!-- Etiqueta para mostrar el Nombre -->
     <Label text="Nombre:" GridPane.rowIndex="1"/>
     <Label fx:id="nombreLabel" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
-    
+
+    <!-- Etiqueta para mostrar el Apellido -->
     <Label text="Apellido:" GridPane.rowIndex="2"/>
     <Label fx:id="apellidoLabel" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
-    
+
+    <!-- Etiqueta para mostrar el Teléfono -->
     <Label text="Teléfono:" GridPane.rowIndex="3"/>
     <Label fx:id="telefonoLabel" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
 
+    <!-- Botón para cargar los datos del usuario -->
     <Button text="Cargar Datos" onAction="#loadUserData" GridPane.rowIndex="4" GridPane.columnSpan="2"/>
 </GridPane>

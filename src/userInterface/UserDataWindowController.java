@@ -13,23 +13,29 @@ import java.io.IOException;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 /**
- *
- * @author 2dam
+ * Controlador de la ventana de datos del usuario.
+ * Se encarga de cargar y mostrar la información del usuario en la interfaz gráfica.
+ * 
+ * @author Lucian
  */
-
-
 public class UserDataWindowController {
 
     @FXML
-    private Label dniLabel;
+    private Label dniLabel;      // Etiqueta para mostrar el DNI del usuario
     @FXML
-    private Label nombreLabel;
+    private Label nombreLabel;   // Etiqueta para mostrar el nombre del usuario
     @FXML
-    private Label apellidoLabel;
+    private Label apellidoLabel;  // Etiqueta para mostrar el apellido del usuario
     @FXML
-    private Label telefonoLabel;
+    private Label telefonoLabel;  // Etiqueta para mostrar el teléfono del usuario
 
+    /**
+     * Carga los datos del usuario desde el acceso a datos y los muestra en las etiquetas correspondientes.
+     *
+     * @throws Exception si ocurre un error al acceder a los datos del usuario.
+     */
     @FXML
     public void loadUserData() throws Exception {
         try {
@@ -52,7 +58,13 @@ public class UserDataWindowController {
         }
     }
 
+    /**
+     * Método para mostrar los datos del usuario (no implementado).
+     *
+     * @param user el objeto User que contiene los datos del usuario.
+     * @throws UnsupportedOperationException si se llama a este método, ya que no está implementado.
+     */
     void displayUserData(User user) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException("Not supported yet."); // To change body of generated methods, choose Tools | Templates.
     }
 }
