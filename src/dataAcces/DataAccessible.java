@@ -9,10 +9,8 @@ package dataAcces;
  *
  * @author 2dam
  */
-public interface DataAccessible {
+import modelDataTransfer.User;
 
-    /**
-     *
-     */
-    public void getUsuario();
+public interface DataAccessible {
+    User getUser() throws Exception;
 }
