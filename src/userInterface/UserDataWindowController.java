@@ -51,4 +51,8 @@ public class UserDataWindowController {
             dniLabel.setText("Error al cargar datos");
         }
     }
+
+    void displayUserData(User user) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

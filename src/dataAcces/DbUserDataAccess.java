@@ -14,9 +14,9 @@ public class DbUserDataAccess implements DataAccessible {
 
     @Override
     public User getUser() throws Exception {
-        String url = "jdbc:mysql://localhost:3306/reto0_din";
-        String username = "root";  // Ajustar según tu configuración
-        String password = "abcd*1234";  // Ajustar según tu configuración
+        String url = "jdbc:mysql://localhost:3306/reto0_din?serverTimezone=Europe/Madrid&useSSL=false";
+        String username = "root";  
+        String password = "abcd*1234";  
 
         String query = "SELECT dni, nombre, apellido, telefono FROM Usuario";  
 

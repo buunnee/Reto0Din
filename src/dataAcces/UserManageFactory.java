@@ -9,22 +9,22 @@ public class UserManageFactory {
     public static DataAccessible getDataAccess() throws IOException {
         Properties config = new Properties();
 
-        // Carga user.properties desde el classpath
-        InputStream input = UserManageFactory.class.getResourceAsStream("/dataAcces/user.properties");
+        // Carga config.properties desde el classpath
+        InputStream input = UserManageFactory.class.getResourceAsStream("/dataAcces/config.properties");
 
         if (input == null) {
-            System.out.println("El archivo user.properties no se encuentra en el classpath.");
+            System.out.println("El archivo config.properties no se encuentra en el classpath.");
             return null;
         }
 
         config.load(input);
 
-        // Obtener el tipo de acceso a datos, si no se encuentra, se establecerá a 'file' por defecto
-        String dataAccessType = config.getProperty("dataAccessType", "file"); // 'file' es el valor predeterminado
+        // Obtener el tipo de acceso a datos desde el archivo de configuración
+        String dataAccessType = config.getProperty("data.access", "file"); // 'file' es el valor predeterminado
 
-        if ("file".equalsIgnoreCase(dataAccessType)) {
+        if (dataAccessType.equalsIgnoreCase("file")) {
             return new FileUserDataAccess();  // Cambia a FileUserDataAccess
-        } else if ("database".equalsIgnoreCase(dataAccessType)) {
+        } else if (dataAccessType.equalsIgnoreCase("database")) {
             return new DbUserDataAccess();     // Asegúrate de tener esta implementación para la base de datos
         }
 
